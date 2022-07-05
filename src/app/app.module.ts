@@ -9,6 +9,11 @@ import { SignupComponent } from './signup/signup.component';
 import { CustomerComponent } from './customer/customer.component';
 import { SupportComponent } from './support/support.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FaqsComponent } from './faqs/faqs.component';
+import { RaiseissueComponent } from './raiseissue/raiseissue.component';
+import { TrackissueComponent } from './trackissue/trackissue.component';
+import { FeedbackComponent } from './feedback/feedback.component';
+import { TollfreeComponent } from './tollfree/tollfree.component';
 
 
 
@@ -21,6 +26,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SignupComponent,
     CustomerComponent,
     SupportComponent,
+    FaqsComponent,
+    RaiseissueComponent,
+    TrackissueComponent,
+    FeedbackComponent,
+    TollfreeComponent,
     
   ],
   imports: [
