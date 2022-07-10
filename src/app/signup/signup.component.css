@@ -1,0 +1,76 @@
+body {
+    background-color: antiquewhite;
+    background: url("images/city.jpg");
+}
+
+.container {
+    width: 500px;
+    margin-top: 30px;
+    border: 3px solid lightgreen;
+    background-color: snow;
+}
+
+hr {
+
+    color: blue;
+    font-weight: bold;
+}
+
+label {
+    font-weight: bold;
+    font-family: arial;
+    margin-top: 10px;
+}
+
+input[type=text],
+input[type=password],
+input[type=email] {
+    width: 100%;
+    margin-bottom: 10px;
+    border: none;
+    padding: 5px;
+    box-shadow: 1px 2px rgb(220, 211, 211);
+}
+
+#p1 {
+    margin-top: 15px;
+}
+
+.anchor {
+    text-decoration: none;
+}
+
+.showPassword {
+    font-family: arial;
+    font-size: 15px;
+    float: right;
+
+
+}
+
+.checkbox {
+    float: right;
+    margin-left: 5px;
+    cursor: pointer;
+
+}
+
+#btn {
+    width: 100%;
+    padding: 15px;
+    background-color: green;
+    color: white;
+    font-size: 20px;
+    font-family: arial;
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 4px;
+}
+
+#btn:hover {
+    background-color: rgb(32, 164, 32);
+}
+
+#p2 {
+    text-align: center;
+}

@@ -9,6 +9,11 @@ import { RaiseissueComponent } from './raiseissue/raiseissue.component';
 import { TrackissueComponent } from './trackissue/trackissue.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { TollfreeComponent } from './tollfree/tollfree.component';
+import { CustomerComponent } from './customer/customer.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { MyaccountComponent } from './myaccount/myaccount.component';
+import { RechargeaccountComponent } from './rechargeaccount/rechargeaccount.component';
+import { TermsandprivacyComponent } from './termsandprivacy/termsandprivacy.component';
 
 
 const routes: Routes = [
@@ -21,6 +26,11 @@ const routes: Routes = [
   {path:'support/trackissue',component:TrackissueComponent},
   {path:'support/feedback',component:FeedbackComponent},
   {path:'support/tollfree',component:TollfreeComponent},
+  {path:'customer',component:CustomerComponent},
+  {path:'aboutus',component:AboutusComponent},
+  {path:'customer/myaccount',component:MyaccountComponent},
+  {path:'customer/rechargeaccount',component:RechargeaccountComponent},
+  {path:'termsandprivacy',component:TermsandprivacyComponent},
 
   {path:'**',redirectTo:''}
 ];

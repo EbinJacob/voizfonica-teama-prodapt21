@@ -1,1 +1,37 @@
-<p>customer works!</p>
+<p class="welcome"> WELCOME!</p>
+  <div class="buttonset" style="margin-top: 30px;">
+    <div class="row" style="margin-left: 10px;">
+        <div class="col-sm-2 col-md-4" style="text-align: center;">
+            <div class="thumbnail">
+                <img src="./assets/my account.jpg" alt="faq" style="margin-bottom: 20px;">
+                <div class="caption" style="padding: 30px;">
+                    <p><a class="btn btn-dark" routerLink="/customer/myaccount">My account</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-5 col-md-4" style="text-align: center; height: 500px; min-height: 50px;">
+            <div class="thumbnail">
+                <img src="./assets/recharge.jpg" alt="faq" width="100%" style="margin-bottom: 60px; margin-top: 10px;">
+                <div class="caption" style="padding: 30px;">
+            
+                    <p><a class="btn btn-dark" routerLink="/customer/rechargeaccount">Recharge account</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-5 col-md-4" style="text-align: center;">
+            <div class="thumbnail">
+                <img src="./assets/support.jpg" alt="faq" width="100%">
+                <div class="caption" style="padding: 30px;">
+                    
+                    <p><a class="btn btn-dark" routerLink="/support">Customer Support</a></p>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <router-outlet></router-outlet>
+    <div>
+        <div>
+            <p> </p>
+        </div>
+    </div>

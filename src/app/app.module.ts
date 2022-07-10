@@ -14,7 +14,13 @@ import { RaiseissueComponent } from './raiseissue/raiseissue.component';
 import { TrackissueComponent } from './trackissue/trackissue.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { TollfreeComponent } from './tollfree/tollfree.component';
-
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { PlansandoffersComponent } from './plansandoffers/plansandoffers.component';
+import { TermsandprivacyComponent } from './termsandprivacy/termsandprivacy.component';
+import { MyaccountComponent } from './myaccount/myaccount.component';
+import { RechargeaccountComponent } from './rechargeaccount/rechargeaccount.component';
+import { FormsModule, NgForm } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -31,11 +37,18 @@ import { TollfreeComponent } from './tollfree/tollfree.component';
     TrackissueComponent,
     FeedbackComponent,
     TollfreeComponent,
+    AboutusComponent,
+    PlansandoffersComponent,
+    TermsandprivacyComponent,
+    MyaccountComponent,
+    RechargeaccountComponent,
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
     BrowserAnimationsModule
   ],
   providers: [],
