@@ -1,137 +1,96 @@
-<h3 style="text-align: center; margin-top: 30px; border: 3px ;border-radius: 50px; border-style: solid; padding: 20px; width: 50%; margin-left: 180px; background-color: cyan; font-weight: bolder;">Feedback</h3>
-        
-        <div style="text-align: left; border: 2px solid black; margin: 20px; padding: 20px; border-radius: 10px; background-color: white;">
-        <h4><b>How would you rate the call connectivity provided by VoizFonica?</b></h4>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault11">
-            <label class="form-check-label" for="flexRadioDefault1">
-              Excellent
-            </label>
-            <br>
-            <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault12">
-            <label class="form-check-label" for="flexRadioDefault2">
-              Good
-            </label>
-            <br>
-            <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault13">
-            <label class="form-check-label" for="flexRadioDefault2">
-              Average
-            </label>
-            <br>
-            <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault14">
-            <label class="form-check-label" for="flexRadioDefault2">
-              Below Average
-            </label>
-            <br>
-            <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault15">
-            <label class="form-check-label" for="flexRadioDefault2">
-              Bad
-            </label>
-            <br>
-          </div>
-          </div>
+<div class="container-fluid"
+    style="border: 2px solid black; border-radius: 10px; background-color: black; width: max-content; margin-top: -20px;">
+    <h3
+        style="text-align: center; margin-top: 10px; border: 3px ;border-radius: 10px; border-style: solid; padding: 10px; width: 100%; background-color: lightblue; font-weight: bolder;">
+        Raise an issue</h3>
 
-          <div style="text-align: left; border: 2px solid black; margin: 20px; padding: 20px; border-radius: 10px; background-color: white;">
-            <h4><b>How would you rate your experience on our website?</b></h4>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault21">
-                <label class="form-check-label" for="flexRadioDefault1">
-                  Excellent
-                </label>
-                <br>
-                <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault22">
-                <label class="form-check-label" for="flexRadioDefault2">
-                  Good
-                </label>
-                <br>
-                <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault23">
-                <label class="form-check-label" for="flexRadioDefault2">
-                  Average
-                </label>
-                <br>
-                <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault24">
-                <label class="form-check-label" for="flexRadioDefault2">
-                  Below Average
-                </label>
-                <br>
-                <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault24">
-                <label class="form-check-label" for="flexRadioDefault2">
-                  Bad
-                </label>
-                <br>
-              </div>
-              </div>
+    <form [formGroup]="form" (ngSubmit)="submit()"
+        style="width: fit-content; align-self: center; text-align:center; margin-left:5px">
 
-              <div style="text-align: left; border: 2px solid black; margin: 20px; padding: 20px; border-radius: 10px; background-color: white;">
-                <h4><b>How would you rate our customer support?</b></h4>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault31">
-                    <label class="form-check-label" for="flexRadioDefault1">
-                      Excellent
-                    </label>
-                    <br>
-                    <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault32">
-                    <label class="form-check-label" for="flexRadioDefault2">
-                      Good
-                    </label>
-                    <br>
-                    <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault33">
-                    <label class="form-check-label" for="flexRadioDefault2">
-                      Average
-                    </label>
-                    <br>
-                    <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault24">
-                    <label class="form-check-label" for="flexRadioDefault2">
-                      Below Average
-                    </label>
-                    <br>
-                    <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault35">
-                    <label class="form-check-label" for="flexRadioDefault2">
-                      Bad
-                    </label>
-                    <br>
-                  </div>
-                  </div>
+        <br>
+        <div class="form-group">
+            <label style="color: white;">How would you rate the call connectivity provided by VoizFonica?</label>
+            <select name="call_Connectivity" formControlName="call_Connectivity" class="form-control"
+                aria-placeholder="select">
+                <option value="Excellent">Excellent</option>
+                <option value="Good">Good</option>
+                <option value="Average">Average</option>
+                <option value="Below Average">Below Average</option>
+                <option value="Bad">Bad</option>
+            </select>
+            <div *ngIf="f['call_Connectivity'].touched && f['call_Connectivity'].invalid" class="alert alert-danger">
+                <div *ngIf="f['call_Connectivity'].errors && f['call_Connectivity'].errors['required']">This field is
+                    required</div>
+            </div>
+        </div>
+        <br>
 
-                  <div style="text-align: left; border: 2px solid black; margin: 20px; padding: 20px; border-radius: 10px; background-color: white;">
-                    <h4><b>How would you rate our plans, prices and their value for the money?</b></h4>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadioDefault41">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                          Excellent
-                        </label>
-                        <br>
-                        <input class="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadioDefault42">
-                        <label class="form-check-label" for="flexRadioDefault2">
-                          Good
-                        </label>
-                        <br>
-                        <input class="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadioDefault43">
-                        <label class="form-check-label" for="flexRadioDefault2">
-                          Average
-                        </label>
-                        <br>
-                        <input class="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadioDefault44">
-                        <label class="form-check-label" for="flexRadioDefault2">
-                          Below Average
-                        </label>
-                        <br>
-                        <input class="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadioDefault45">
-                        <label class="form-check-label" for="flexRadioDefault2">
-                          Bad
-                        </label>
-                      </div>
-                      </div>
-                      <br>
-                      <br>
-
-                      <div class="form-group" style="text-align: center;">
-                        <label for="exampleFormControlTextarea1" style="color: white">Suggestions/Other Comments</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Type here..." style="width:100%; margin-left: 0px;"></textarea>
-                      </div>
-
-                      <br>
-                      <br>
-                      <div class="form-group">
-                        <button type="button" class="btn btn-success" style="margin-left: 300px;">Submit Feedback</button>
-                    </div>
+        <div class="form-group">
+            <label style="color: white;">How would you rate the useablity and overall experience on our web
+                application?</label>
+            <select name="experience" formControlName="experience" class="form-control" aria-placeholder="select">
+                <option value="Excellent">Excellent</option>
+                <option value="Good">Good</option>
+                <option value="Average">Average</option>
+                <option value="Below Average">Below Average</option>
+                <option value="Bad">Bad</option>
+            </select>
+            <div *ngIf="f['experience'].touched && f['experience'].invalid" class="alert alert-danger">
+                <div *ngIf="f['experience'].errors && f['experience'].errors['required']">This field is required</div>
+            </div>
+        </div>
+        <br>
+        <div class="form-group">
+            <label style="color: white;">How would you rate our customer support service?</label>
+            <select name="customer_Support" formControlName="customer_Support" class="form-control"
+                aria-placeholder="select">
+                <option value="Excellent">Excellent</option>
+                <option value="Good">Good</option>
+                <option value="Average">Average</option>
+                <option value="Below Average">Below Average</option>
+                <option value="Bad">Bad</option>
+            </select>
+            <div *ngIf="f['customer_Support'].touched && f['customer_Support'].invalid" class="alert alert-danger">
+                <div *ngIf="f['customer_Support'].errors && f['customer_Support'].errors['required']">This field is
+                    required</div>
+            </div>
+        </div>
+        <br>
+        <div class="form-group">
+            <label style="color: white;">How would you rate our plans, prices and their value for the money?</label>
+            <select name="value_For_Money" formControlName="value_For_Money" class="form-control"
+                aria-placeholder="select">
+                <option value="Excellent">Excellent</option>
+                <option value="Good">Good</option>
+                <option value="Average">Average</option>
+                <option value="Below Average">Below Average</option>
+                <option value="Bad">Bad</option>
+            </select>
+            <div *ngIf="f['value_For_Money'].touched && f['value_For_Money'].invalid" class="alert alert-danger">
+                <div *ngIf="f['value_For_Money'].errors && f['value_For_Money'].errors['required']">This field is
+                    required</div>
+            </div>
+        </div>
+        <br>
+        <div class="form-group">
+            <label style="color: white;">Your suggestions and other comments</label>
+            <textarea formControlName="your_Opinion" class="form-control" rows="3"
+                placeholder="Type here..."></textarea>
+            <div *ngIf="f['your_Opinion'].touched && f['your_Opinion'].invalid" class="alert alert-danger">
+                <span *ngIf="f['your_Opinion'].errors && f['your_Opinion'].errors['required']">This field is
+                    required</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="submit" [disabled]="!form.valid" id="btn" class="btn btn-primary">Submit Feedback</button>
+        </div>
+        <small><b>{{msg}}</b></small>
+        <div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Thank you!</strong> for your feedback.
+            <small style="color: white;"><b>{{msg}}</b></small>
+            <button type="button" (click)="closeAlert()" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    </form>
+</div>

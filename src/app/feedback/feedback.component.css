@@ -1,0 +1,12 @@
+#btn{
+    margin: 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+#btn:hover{
+    background-color: green;
+}
+option{
+    background-color: aqua;
+}

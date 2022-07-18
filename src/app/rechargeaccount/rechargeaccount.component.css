@@ -1,0 +1,6 @@
+.btn btn-primary:active{
+    background-color: red;
+}
+.btn btn-primary:hover{
+    background-color: grey;
+}

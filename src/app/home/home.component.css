@@ -1,25 +1,18 @@
-#welcome{
-  color: white;
-  padding: 5px;
-  font-size: xx-large;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  padding-top: 17px;
-  font-weight: bolder;
-  
+#box1{
+    background-image: url(./car2.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
-@media only screen and (max-width: 1366px){
-.nav-link{
-  font-size: 17px;
+#box2{
+    background-image: url(./car2.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
-}
-@media only screen and (max-width: 1024px){
-.nav-link{
-  margin-left: 20px;
-}
-}
-.carousel-inner > .item {
-  -webkit-transition: 5s linear left;
-  -moz-transition: 5s linear left;
-  -o-transition: 5s linear left;
-  transition: 5s linear left;
+#box3{
+    background-image: url(./car2.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }

@@ -14,7 +14,14 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { MyaccountComponent } from './myaccount/myaccount.component';
 import { RechargeaccountComponent } from './rechargeaccount/rechargeaccount.component';
 import { TermsandprivacyComponent } from './termsandprivacy/termsandprivacy.component';
-
+import { PleaseverifyComponent } from './pleaseverify/pleaseverify.component';
+import { LogoutComponent } from './logout/logout.component';
+import { MyinvoicesComponent } from './myinvoices/myinvoices.component';
+import { AdminDashBoardComponent } from './admin-dash-board/admin-dash-board.component';
+import { AdminAllFeedbackComponent } from './admin-all-feedback/admin-all-feedback.component';
+import { AdminAllIssuesComponent } from './admin-all-issues/admin-all-issues.component';
+import { AdminAllInvoicesComponent } from './admin-all-invoices/admin-all-invoices.component';
+import { AdminCreatePlanComponent } from './admin-create-plan/admin-create-plan.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -31,6 +38,15 @@ const routes: Routes = [
   {path:'customer/myaccount',component:MyaccountComponent},
   {path:'customer/rechargeaccount',component:RechargeaccountComponent},
   {path:'termsandprivacy',component:TermsandprivacyComponent},
+  {path:'verify_your_account',component:PleaseverifyComponent},
+  {path:'logout',component:LogoutComponent},
+  {path:'myinvoices',component:MyinvoicesComponent},
+  {path:'admindashboard',component:AdminDashBoardComponent},
+  {path:'admindashboard/allFeedbacks',component:AdminAllFeedbackComponent},
+  {path:'admindashboard/allIssues',component:AdminAllIssuesComponent},
+  {path:'admindashboard/allInvoices',component:AdminAllInvoicesComponent},
+  {path:'admindashboard/createNewPlan',component:AdminCreatePlanComponent},
+
 
   {path:'**',redirectTo:''}
 ];

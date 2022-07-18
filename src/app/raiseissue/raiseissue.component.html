@@ -1,33 +1,61 @@
 <div class="main" style="border: 2px solid black; border-radius: 100px; background-color: black;">
-<h3 style="text-align: center; margin-top: 30px; border: 3px ;border-radius: 50px; border-style: solid; padding: 20px; width: 50%; margin-left: 200px; background-color: lightblue; font-weight: bolder;">Raise an issue</h3>
+  <h3
+      style="text-align: center; margin-top: 30px; border: 3px ;border-radius: 50px; border-style: solid; padding: 20px; width: 50%; margin-left: 200px; background-color: lightblue; font-weight: bolder;">
+      Raise an issue</h3>
+
+  <form [formGroup]="form" (ngSubmit)="submit()" style="width: 50%; align-self: center; text-align:center; margin-left:200px">
+      <div class="form-group">
+          <label style="color: white;">Enter your full name</label>
+          <input type="text" formControlName="name" class="form-control" placeholder="Enter your name">
+          <div *ngIf="f['name'].touched && f['name'].invalid" class="alert alert-danger">
+              <div *ngIf="f['name'].errors && f['name'].errors['required']">Name is required</div>
+              <div *ngIf="f['name'].errors && f['name'].errors['pattern']">Name should be in format</div>
+          </div>
+      </div>
+      <div class="form-group">
+          <label style="color: white;">Enter your primary Contact E-mail</label>
+          <input type="email" formControlName="email" class="form-control" placeholder="name@email.com">
+          <div *ngIf="f['email'].touched && f['email'].invalid" class="alert alert-danger">
+              <div *ngIf="f['email'].errors && f['email'].errors['required']">Email is required</div>
+              <div *ngIf="f['email'].errors && f['email'].errors['email']">Invalid email id</div>
+          </div>
+      </div>
+      <div class="form-group">
+          <label style="color: white;">Enter your primary Mobile Number</label>
+          <input type="number" formControlName="mobile_No" class="form-control" placeholder="mobile number">
+          <div *ngIf="f['mobile_No'].touched && f['mobile_No'].invalid" class="alert alert-danger">
+              <div *ngIf="f['mobile_No'].errors && f['mobile_No'].errors['required']">Mobile number is required</div>
+              <div *ngIf="f['mobile_No'].errors && f['mobile_No'].errors['pattern']">Invalid mobile number</div>
+          </div>
+      </div>
+      <div class="form-group">
+          <label style="color: white;">Choose your current plan</label>
+          <select name="plans" formControlName="plan" class="form-control" aria-placeholder="select">
+              <option value="PREPAID">Prepaid</option>
+              <option value="POSTPAID">Postpaid</option>
+              <option value="DONGLE">Dongle</option>
+          </select>
+          <div *ngIf="f['plan'].touched && f['plan'].invalid" class="alert alert-danger">
+              <div *ngIf="f['plan'].errors && f['plan'].errors['required']">Plan is required</div>
+          </div>
+      </div>
+      <div class="form-group">
+          <label style="color: white;">Write your issue</label>
+          <textarea formControlName="description" class="form-control" rows="3" placeholder="Type here..."></textarea>
+          <div *ngIf="f['description'].touched && f['description'].invalid" class="alert alert-danger">
+              <span *ngIf="f['description'].errors && f['description'].errors['required']">Description is required></span> 
+          </div>
+      </div>
+      <div class="form-group">
+          <button type="submit" [disabled]="!form.valid"  id="btn" class="btn btn-primary">Submit</button>
+      </div>
+      <div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+          <strong>Success!</strong> Your issue is submitted successfully.
+          <small><b>{{msg}}</b></small>
+          <button type="button" (click)="closeAlert()" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
         
-        <form style="width: 50%; align-self: center; text-align:center; margin-left:200px">
-            <div class="form-group">
-              <label for="exampleFormControlInput1" style="color: white;">Enter your full name</label>
-              <input type="text" class="form-control" id="exampleFormControlInput1">
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlInput1" style="color: white;">Enter your primary Contact E-mail</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@email.com">
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlInput1" style="color: white;">Enter your primary Mobile Number</label>
-                <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="">
-            </div>
-            <div class="form-group">
-              <label for="exampleFormControlSelect1" style="color: white;">Choose your current plan</label>
-              <select class="form-control" id="exampleFormControlSelect1" aria-placeholder="Select">
-                <option>Pre-Paid</option>
-                <option>Post-Paid</option>
-                <option>Dongle</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="exampleFormControlTextarea1" style="color: white;">Write a brief description of the problem you are facing</label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Type here..."></textarea>
-            </div>
-            <div class="form-group">
-                <button type="button" class="btn btn-dark">Submit</button>
-            </div>
-          </form>
+  </form>
 </div>

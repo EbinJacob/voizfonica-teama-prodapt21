@@ -1,62 +1,57 @@
-<h1 style="text-align: Center; margin-top: 30px; font-weight:bolder; font-family: 'Times New Roman', Times, serif; font-size: x-large; color: cyan; border: 3px solid black; background-color: darkblue;">Welcome to VoizFonica Support Center</h1>
-        <div class="buttonset" style="margin-top: 30px; width: fit-content;">
-            <div class="row" style="margin-left: autox;">
-                <div class="col-sm-2 col-md-4" style="text-align: center;">
-                    <div class="thumbnail" style="background-color: black">
-                        <img src="./assets/FAQ.png" alt="faq">
-                        <div class="caption" style="padding: 30px;">
-                            <h3><b>FAQs</b></h3>
-                            <p class="desc">Read a list of questions frequently asked by our customers.</p>
-                            <p><a href="#" class="btn btn-dark" routerLink="/support/faqs">Go to FAQs</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-5 col-md-4" style="text-align: center; height: 10px;">
-                    <div class="thumbnail" style="background-color: black">
-                        <img src="./assets/raiseanissue.png" alt="faq" width="100%" style="margin-bottom: 30px;">
-                        <div class="caption" style="padding: 30px;">
-                            <h3><b>Raise an issue</b></h3>
-                            <p class="desc">You can raise an issue and our team will resolve it for you. </p>
-                            <p><a href="#" class="btn btn-dark" routerLink="/support/raiseissue">Raise an issue</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-5 col-md-4" style="text-align: center;">
-                    <div class="thumbnail" style="background-color: black">
-                        <img src="./assets/tracking.jpg" alt="faq" width="100%">
-                        <div class="caption" style="padding: 30px;">
-                            <h3><b>Track issues</b></h3>
-                            <p class="desc">Here you can check the status of your previously raised issues.</p>
-                            <p><a href="#" class="btn btn-dark" routerLink="/support/trackissue">Track</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-5 col-md-4" style="text-align: center; margin-left: 135px;">
-                    <div class="thumbnail" style="background-color: black">
-                        <img src="./assets/feedback.jpg" alt="faq" width="100%">
-                        <div class="caption" style="padding: 30px; margin-bottom: 30px;">
-                            <h3><b>Feedback</b></h3>
-                            <p class="desc">We would love to hear from you. Let us know your feedbacks and suggestions</p>
-                            <p><a href="#" class="btn btn-dark" routerLink="/support/feedback">Feedback</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-5 col-md-4" style="text-align: center;">
-                    <div class="thumbnail" style="background-color: black">
-                        <img src="./assets/contact.png" alt="faq" width="100%">
-                        <div class="caption" style="padding: 30px;">
-                            <h3><b>Contact</b></h3>
-                            <p class="desc">We have other options for you to contact us. Feel free to connect with us for assistance.</p>
-                            <p><a href="#" class="btn btn-dark" routerLink="/support/tollfree">Connect</a></p>
-                        </div>
-                    </div>
-                </div>
+<h1
+    style="text-align: Center; margin-top: 0px; font-weight:bolder; font-family: 'Times New Roman', Times, serif; font-size: x-large; color: cyan; border: 3px solid black; background-color: darkblue;">
+    Welcome to VoizFonica Support Center</h1>
+
+<div class="container-fluid">
+    <div class="col-sm-5 col-md-3" style="text-align: center; width: 290px">
+        <div class="thumbnail" style="background-color: black">
+            <img src="./assets/FAQ.png" alt="faq">
+            <div class="caption" style="padding: 30px;">
+                <h3><b>FAQs</b></h3>
+                <p class="desc">Read a list of questions frequently asked by our customers.</p>
+                <p><a href="#" class="btn btn-light" routerLink="/support/faqs">Go to FAQs</a></p>
             </div>
         </div>
-        <router-outlet></router-outlet>
-        <div>
-            <div>
-                <p> </p>
+    </div>
+    <div class="col-sm-5 col-md-3" style="text-align: center; width: 290px;">
+        <div class="thumbnail" style="background-color: black">
+            <img src="./assets/raiseanissue.png" alt="faq" width="100%">
+            <div class="caption" style="padding: 30px;">
+                <h3><b>Raise an issue</b></h3>
+                <p class="desc">You can raise an issue and our team will resolve it for you. </p>
+                <p><a href="#" class="btn btn-light" routerLink="/support/raiseissue">Raise an issue</a></p>
             </div>
         </div>
-        
+    </div>
+    <div class="col-sm-5 col-md-3" style="text-align: center; width: 290px;">
+        <div class="thumbnail" style="background-color: black">
+            <img src="./assets/tracking.jpg" alt="faq" width="100%">
+            <div class="caption" style="padding: 30px;">
+                <h3><b>Track issues</b></h3>
+                <p class="desc">Here you can check the status of your previously raised issues.</p>
+                <p><a href="#" class="btn btn-light" routerLink="/support/trackissue">Track</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-5 col-md-3" style="text-align: center; width: 290px;">
+        <div class="thumbnail" style="background-color: black">
+            <img src="./assets/feedback.jpg" alt="faq" width="100%">
+            <div class="caption" style="padding: 30px;">
+                <h3><b>Feedback</b></h3>
+                <p class="desc">We would love to hear from you. Let us know your feedbacks and suggestions</p>
+                <p><a href="#" class="btn btn-light" routerLink="/support/feedback">Feedback</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-5 col-md-3" style="text-align: center; width: 290px;">
+        <div class="thumbnail" style="background-color: black">
+            <img src="./assets/contact.png" alt="faq" width="100%">
+            <div class="caption" style="padding: 30px;">
+                <h3><b>Contact</b></h3>
+                <p class="desc">We have other options for you to contact us. Feel free to connect with us for
+                    assistance.</p>
+                <p><a href="#" class="btn btn-light" routerLink="/support/tollfree">Connect</a></p>
+            </div>
+        </div>
+    </div>
+</div>

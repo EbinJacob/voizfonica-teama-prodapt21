@@ -1,0 +1,27 @@
+<h1 style="color:aliceblue; text-align: right; margin-right: 30px;">All Feedbacks</h1>
+<br>
+<br>
+<div class="container-fluid">
+    <table class="table table-dark table-hover" style="text-align: center; border: 2px solid white;">
+        <thead>
+          <th style="text-align: center">Feedback Id</th>
+          <th style="text-align: center">User Id</th>
+          <th style="text-align: center">Call Connectivity</th>
+          <th style="text-align: center">Overall Experience</th>
+          <th style="text-align: center">Customer Support</th>
+          <th style="text-align: center">Value for Money</th>
+          <th style="text-align: center">Comments</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let feedback of feedbacks">
+            <td>{{feedback.feedbackId}}</td>
+            <td>{{feedback.userId}}</td>
+            <td>{{feedback.call_Connectivity}}</td>
+            <td>{{feedback.experience}}</td>
+            <td>{{feedback.customer_Support}}</td>
+            <td>{{feedback.value_For_Money}}</td>
+            <td>{{feedback.your_Opinion}}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>

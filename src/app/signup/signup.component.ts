@@ -13,21 +13,25 @@ import { SignupService } from '../signup.service';
 export class SignupComponent implements OnInit {
 
   user = new User();
-  msg='';
 
-  constructor(private _service : SignupService, private _router : Router) { }
+  msg = '';
+  status = 0;
+
+  constructor(private _service: SignupService, private _router: Router) { }
 
   ngOnInit(): void {
   }
-  signupuser(){
+  
+  signupuser() {
     this._service.signupUserFromRemote(this.user).subscribe(
-      data=>{
+      data => {
         console.log("Respose received");
-        this.msg="Registration successfull";
+        this.msg = "Registration successfull. Welcome on board! You can now login to VoizFonica";
+        this._router.navigate(['/verify_your_account']);
       },
-      error=>{
+      error => {
         console.log("Exception occured");
-        this.msg=error.error;
+        this.msg = "Error! Please try another Email ID";
       }
     )
 

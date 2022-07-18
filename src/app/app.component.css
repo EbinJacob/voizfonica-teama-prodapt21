@@ -16,8 +16,11 @@
      
  }
  .nav-link:hover {
-     color: grey;
-   background-color: darkblue;
+     color: white;
+     background-color: darkblue;
+ }
+ .nav-item:active{
+   color:aquamarine;
  }
 
 #login{
@@ -27,10 +30,12 @@
    margin-right: 15px;
  }
  .jumbotron{ 
-    background-image: url("bg1-min.png");
+    background-image: url("../assets/bgneon.jpg");
     background-repeat: no-repeat;
-    background-position: fixed;
+    background-position: center;
+    background-attachment: fixed ;
     background-size: cover;
+  
 }
  @media only screen and (max-width: 1366px){
     .nav-link{

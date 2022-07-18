@@ -1,0 +1,44 @@
+package com.example.registration.controller;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.registration.model.RechargePlan;
+import com.example.registration.service.RechargeService;
+
+@RestController
+@CrossOrigin(origins = "http://localhost:4200")
+public class RechargeController {
+	
+	@Autowired
+	private RechargeService service;
+	
+	
+	@GetMapping("/get_plan_by_id/{planId}")
+	public RechargePlan getPlanById(@PathVariable int planId) throws Exception{
+		Optional<RechargePlan> plan = service.fetchRechargePlanByPlanId(planId);
+		if(plan==null) {
+			throw new Exception("Invalid plan");
+		}
+		return plan.orElseThrow();
+	}
+	@GetMapping("/get_plan_by_serviceType/{serviceType}")
+	public List<RechargePlan> getPlanByServiceType(@PathVariable String serviceType)throws Exception{
+		List<RechargePlan> plans = service.fetchRechargePlanByServiceType(serviceType);
+		if(plans==null) {
+			throw new Exception("Couldn't Find any");
+		}
+		return plans;
+	}
+	@PostMapping("add_plan")
+	public void addPlan(RechargePlan plan) {
+		service.savePlan(plan);
+	}
+}

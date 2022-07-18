@@ -1,37 +1,34 @@
-<p class="welcome"> WELCOME!</p>
-  <div class="buttonset" style="margin-top: 30px;">
-    <div class="row" style="margin-left: 10px;">
-        <div class="col-sm-2 col-md-4" style="text-align: center;">
-            <div class="thumbnail">
-                <img src="./assets/my account.jpg" alt="faq" style="margin-bottom: 20px;">
-                <div class="caption" style="padding: 30px;">
-                    <p><a class="btn btn-dark" routerLink="/customer/myaccount">My account</a></p>
+<div class="container-fluid" style="text-align: center; margin-left: 390px;">
+    <p class="welcome"> Welcome {{namevar}}!</p>
+</div>
+<div class="container-fluid">
+    <div class="buttonset" style="margin-top: 30px; margin-left: 300px;">
+        <div class="row" style="margin-left: 10px;">
+            <div class="col-sm-2 col-md-4" style="text-align: center; width: 300px; height: 300px;" >
+                <div class="thumbnail">
+                    <img src="./assets/my account.jpg" alt="faq" style="margin-bottom: 20px;">
+                    <div class="caption" style="padding: 20px; background-color: black;">
+                        <p><a class="btn btn-light" routerLink="/customer/myaccount" style="padding-left: 30px; padding-right: 30px; font-size: large; font-weight: bold;">My Account</a></p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-5 col-md-4" style="text-align: center; height: 500px; min-height: 50px;">
-            <div class="thumbnail">
-                <img src="./assets/recharge.jpg" alt="faq" width="100%" style="margin-bottom: 60px; margin-top: 10px;">
-                <div class="caption" style="padding: 30px;">
-            
-                    <p><a class="btn btn-dark" routerLink="/customer/rechargeaccount">Recharge account</a></p>
+            <div class="col-sm-5 col-md-4" style="text-align: center; width: 300px; height: 300px;">
+                <div class="thumbnail">
+                    <img src="./assets/recharge.jpg" alt="faq" width="90%"
+                        style="margin-bottom: 60px; margin-top: 10px;">
+                    <div class="caption" style="padding: 20px; background-color: black;">
+                        <p><a class="btn btn-light" routerLink="/customer/rechargeaccount" style="padding-left: 30px; padding-right: 30px; font-size: large; font-weight: bold;">Recharge Account</a></p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-5 col-md-4" style="text-align: center;">
-            <div class="thumbnail">
-                <img src="./assets/support.jpg" alt="faq" width="100%">
-                <div class="caption" style="padding: 30px;">
-                    
-                    <p><a class="btn btn-dark" routerLink="/support">Customer Support</a></p>
+            <div class="col-sm-5 col-md-4" style="text-align: center;  width: 300px; height: 300px;">
+                <div class="thumbnail">
+                    <img src="./assets/support.jpg" alt="faq" width="86%">
+                    <div class="caption" style="padding: 20px; background-color: black;">
+                        <p><a class="btn btn-light" routerLink="/support"  style="padding-left: 30px; padding-right: 30px; font-size: large; font-weight: bold;">Customer Support</a></p>
+                    </div>
                 </div>
             </div>
-        </div>
-      </div>
-    </div>
-    <router-outlet></router-outlet>
-    <div>
-        <div>
-            <p> </p>
         </div>
     </div>
+</div>

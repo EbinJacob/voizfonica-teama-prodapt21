@@ -1,23 +1,25 @@
 
      
-        <div class="container my-5" >
-            <div class="card bg-secondary mx-auto" style="width: 18rem;">
-            <img src="assets/images/account1.jpg" class="card-img-top" alt="...">
+        <div class="container my-5" style="margin-top: -10px;">
+            <div class="card bg-black mx-auto" style="width: fit-content; text-align: center; color: aliceblue;">
+                <div style="padding: 10px; padding-top:25px;background-color: grey;">
+                    <h2 style="text-align:center"> My Account </h2>
+                </div>
             <div class="card-body">
-                <h5 class="class-tittle">USER ID:5280</h5>
-                <p class="card-text"> USER NAME: VIRUMANDI </p>
-                <p class="card-text">CURRENT PLAN: PREPAID(RS 239) VALIDITY:28 DAYS </p>
-                
+                <h2><b> User ID: </b> {{idvar}}</h2>
+                <h2><b> Registered Email-ID: </b> {{emailvar}}</h2>
+                <h2><b> User Name: </b> {{namevar}}</h2>
+                <h3 style="color: aliceblue; text-decoration: solid;">{{msg}}</h3>
+                <h2><b> Current Service Type: </b> {{servicetypevar}}</h2>
+                <h2><b> Current Plan ID: </b> {{planidvar}}</h2>
+                <h2><b> Current Plan Name: </b> {{plannamevar}}</h2>
+                <h2><b> Current Plan Validity: </b> {{planvalidityvar}} Days</h2>
+                <h2><b> Current Plan Cost: </b>{{plancostvar}}</h2>
             </div>
-            <div class="card-footer">
-                <button type="button" class="btn btn-primary" >VIEW INVOICE</button> 
-              </div>
-              <div class="card-footer">
-                <button type="button" class="btn btn-primary" >VIEW ISSUE</button> 
-              </div>
-        
+            <div class="card-footer" style="margin-bottom: 20px;">
+                <button type="button" class="btn btn-light" style="width: fit-content; font-size: large;" routerLink="/customer/rechargeaccount">Recharge Now</button> 
+              </div>     
             </div>
-            
         </div>
      
     

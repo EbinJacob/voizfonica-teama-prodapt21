@@ -11,10 +11,10 @@ export class SignupService {
   constructor( private _http : HttpClient) { }
 
   public loginUserFromRemote(user :User):Observable<any>{
-    return this._http.post<any>("http://localhost:8090/login",user)
+    return this._http.post<any>("http://localhost:8080/login",user)
   }
 
   public signupUserFromRemote(user: User):Observable<any>{
-    return this._http.post<any>("http://localhost:8090/registeruser",user);
+    return this._http.post<any>("http://localhost:8080/registeruser",user);
   }
 }

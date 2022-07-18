@@ -1,0 +1,5 @@
+package com.example.registration.model;
+
+public class Issue {
+
+}

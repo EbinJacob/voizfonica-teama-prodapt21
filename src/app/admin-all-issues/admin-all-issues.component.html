@@ -1,0 +1,32 @@
+<h1 style="color:aliceblue; text-align: right; margin-right: 30px;">All Issues</h1>
+<br>
+<br>
+<div class="container-fluid">
+    <table class="table table-dark table-hover" style="text-align: center; border: 2px solid white;">
+        <thead>
+          <th style="text-align: center">Issue Id</th>
+          <th style="text-align: center">User Name</th>
+          <th style="text-align: center">Contact Email</th>
+          <th style="text-align: center">Contact No.</th>
+          <th style="text-align: center">Plan</th>
+          <th style="text-align: center">Issue Description</th>
+          <th style="text-align: center">User Id.</th>
+          <th style="text-align: center">Issue Status</th>
+          <th style="text-align: center">Action</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let issue of issues">
+            <td>{{issue.id}}</td>
+            <td>{{issue.name}}</td>
+            <td>{{issue.email}}</td>
+            <td>{{issue.mobile_No}}</td>
+            <td>{{issue.plan}}</td>
+            <td>{{issue.description}}</td>
+            <td>{{issue.userId}}</td>
+            <td>{{getIssueStatusMessage(issue.active)}}</td>
+            <td><button *ngIf="issue.active===true" type="button" class="btn btn-danger" (click)="markResolved(issue.id)">Mark as Resolved</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>
