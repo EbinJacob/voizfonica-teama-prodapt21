@@ -1,4 +1,4 @@
-<div class="container" style="height: auto; width:auto;">
+<div class="container" style="height: auto; width:500px; margin-top: -30px;">
     <form #registerform="ngForm" (ngSubmit)="signupuser()">
 
         <br>
@@ -51,12 +51,11 @@
         </div>
         <br>
         <small><b>{{msg}}</b></small>
-        <br>
 
-        <input type="checkbox" id="toggle-password" class="checkbox"><span class="showPassword">Show Password</span>
-        <br>
+        <!--<input type="checkbox" id="toggle-password" class="checkbox"><span class="showPassword">Show Password</span>
+        <br>-->
 
-        <p id="p1">By creating an account you agree to our <a routerLink="/termsandprivacy" class="anchor">Terms of
+        <p id="p1" style="text-align: center;">By creating an account you agree to our <br><a routerLink="/termsandprivacy" class="anchor">Terms of
                 Service & Privacy Policy.</a></p>
         <div>
             <button [disabled]="registerform.form.invalid" type="submit" id="btn">Register</button>

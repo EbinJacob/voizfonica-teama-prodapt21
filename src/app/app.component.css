@@ -1,13 +1,18 @@
 
 #img{
-    height: 80px;
-    width: 100px;
+    height: 62px;
+    width: 180px;
+    background-color: black;
+    padding-bottom: 10px;
+    padding-left: 30px;
   }
   .navbar{
     padding: 5px;
+    background-color: black;
     }
  .navbar-brand{
-    padding: 0 3%;
+    padding-top: 0px;
+    padding-left: 0px;
    }
 .nav-link{
      color: black;
@@ -35,6 +40,7 @@
     background-position: center;
     background-attachment: fixed ;
     background-size: cover;
+    
   
 }
  @media only screen and (max-width: 1366px){

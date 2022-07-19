@@ -19,7 +19,6 @@ export class UserIssueService {
     return this._http.get<any>("http://localhost:8080/fetch_issue_by_id/"+userId);
   }
   public resolveIssue(id:number){
-    console.log("ID="+id);
-    return this._http.get<any>("http://localhost:8080/resolve/"+id);
+    return this._http.put("http://localhost:8080/resolve",id);
   }
 }

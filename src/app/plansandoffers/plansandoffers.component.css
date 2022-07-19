@@ -1,0 +1,39 @@
+.carousel-item{
+    height:500px;
+}
+.important{
+    color: whitesmoke;
+    padding: 10px;
+    font-family: arial;
+    margin-bottom: 20px;
+}
+.rechargeplans{
+    border: 1px solid rgb(189, 37, 37);
+    padding-bottom: 60px;
+}
+h5{
+    padding: 8px;
+    font-family: arial;
+}
+i{
+    margin-right: 12px;
+}
+.mobile{
+    color: rgb(185, 7, 7);
+}
+.landline{
+    color: royalblue;
+}
+.route{
+    color: brown;
+}
+#home{
+    color:rgb(248, 252, 58);
+}
+#office{
+    color: rgb(20, 5, 117);
+}
+#public{
+    color: rgb(0, 0, 0);
+}
+

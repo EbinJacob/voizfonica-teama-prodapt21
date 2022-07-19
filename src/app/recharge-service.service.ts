@@ -29,7 +29,8 @@ export class RechargeServiceService {
   public getAllInvoices():Observable<any>{
     return this._http.get<any>("http://localhost:8080/getAllInvoices");
   }
-  public addPlan(plan:any){
-    this._http.post<any>("http://localhost:8080/add_plan",plan);
+  public addPlan(plan:RechargePlan):Observable<any>{
+    
+    return this._http.post<any>("http://localhost:8080/add_plan",plan);
   }
 }

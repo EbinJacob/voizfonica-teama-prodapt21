@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { of } from 'rxjs';
+import { Invoice } from '../invoice';
 import { LoginstatusService } from '../loginstatus.service';
 import { RechargeServiceService } from '../recharge-service.service';
 
@@ -20,12 +22,6 @@ export class MyinvoicesComponent implements OnInit {
       this.invoices = res;
     })
   }
-  getPlanName(planId: number) {
-    //this._service.getPlanById(planId).subscribe(res => {
-    //  return res.planName;
-    //})
-    console.log("getPlanName: "+planId);
-  }
   getPlanValidity(planId: number) {
     this._service.getPlanById(planId).subscribe(res => {
       return res.planValidity;
@@ -36,3 +32,4 @@ export class MyinvoicesComponent implements OnInit {
   }
 
 }
+

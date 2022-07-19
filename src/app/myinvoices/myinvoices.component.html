@@ -1,11 +1,11 @@
 <div class="container">
-    <h3 style="color: white; text-align: center; font-size: larger;">My Invoices</h3>
+    <h2 style="color: white; text-align: center;">My Invoices</h2>
     <table class="table table-dark table-hover" style="text-align: center; border: 2px solid white;">
         <thead>
             <th style="text-align: center">Invoice Id.</th>
             <th style="text-align: center">Recharge Date</th>
             <th style="text-align: center">Plan Id</th>
-            <th style="text-align: center">Plan Name</th>
+            <!--<th style="text-align: center">Plan Name</th>-->
             <!-- <th style="text-align: center">Plan Validity</th> -->
             <th style="text-align: center">Recharge Amount</th>
         </thead>
@@ -14,7 +14,7 @@
                 <td>{{invoice.invoiceId}}</td>
                 <td>{{invoice.rechargeDate}}</td>
                 <td>{{invoice.planId}}</td>
-                 <td>{{getPlanName(invoice.planId)}}</td>
+                <!--<td>{{getPlanName(invoice.planId)}}</td> -->
                 <!-- <td>{{getPlanValidity(invoice.planId)}}</td> -->
                 <td>{{invoice.rechargeAmount}}</td>
             </tr>

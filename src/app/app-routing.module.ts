@@ -22,6 +22,7 @@ import { AdminAllFeedbackComponent } from './admin-all-feedback/admin-all-feedba
 import { AdminAllIssuesComponent } from './admin-all-issues/admin-all-issues.component';
 import { AdminAllInvoicesComponent } from './admin-all-invoices/admin-all-invoices.component';
 import { AdminCreatePlanComponent } from './admin-create-plan/admin-create-plan.component';
+import { PlansandoffersComponent } from './plansandoffers/plansandoffers.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -46,6 +47,7 @@ const routes: Routes = [
   {path:'admindashboard/allIssues',component:AdminAllIssuesComponent},
   {path:'admindashboard/allInvoices',component:AdminAllInvoicesComponent},
   {path:'admindashboard/createNewPlan',component:AdminCreatePlanComponent},
+  {path:'plansAndOffers',component:PlansandoffersComponent},
 
 
   {path:'**',redirectTo:''}

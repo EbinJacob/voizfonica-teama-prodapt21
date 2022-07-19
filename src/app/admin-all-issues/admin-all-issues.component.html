@@ -24,7 +24,8 @@
             <td>{{issue.description}}</td>
             <td>{{issue.userId}}</td>
             <td>{{getIssueStatusMessage(issue.active)}}</td>
-            <td><button *ngIf="issue.active===true" type="button" class="btn btn-danger" (click)="markResolved(issue.id)">Mark as Resolved</button>
+            <td>
+              <button *ngIf="issue.active===true" type="button" class="btn btn-danger" (click)="markResolved(issue.id)">Mark as Resolved</button>
             </td>
           </tr>
         </tbody>

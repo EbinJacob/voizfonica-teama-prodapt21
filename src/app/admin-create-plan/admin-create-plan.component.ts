@@ -8,15 +8,14 @@ import { RechargePlan } from '../recharge-plan';
   styleUrls: ['./admin-create-plan.component.css']
 })
 export class AdminCreatePlanComponent implements OnInit {
-  plan:RechargePlan;
-  constructor(private service: RechargeServiceService ) {}
+  plan: RechargePlan;
+  constructor(private service: RechargeServiceService) { }
 
   ngOnInit(): void {
   }
-  inputOffer(data:any){
+  inputOffer(data: RechargePlan) {
+    this.service.addPlan(data);
     console.log(data);
-    this.plan=data;
-    this.service.addPlan(this.plan);
   }
 
 }
