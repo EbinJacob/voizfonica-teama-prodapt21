@@ -15,11 +15,9 @@ export class LogoutComponent implements OnInit {
     this.loginStatusService.changeLoginStatus(false);
     this.loginStatusService.changeUserStatus({id:0,emailid:'',fullname:'',enabled:false,password:'',currentPlanId:0});
     this.userService.logout().subscribe((Response)=>{
+      //console.log(localStorage.getItem('user'));
       localStorage.removeItem('user');
-      console.log(localStorage.getItem('user'));
-      this.router.navigateByUrl('/login');
-    },(error)=>{
-      this.errorMessage="Error! Could not logout";
+      this.router.navigateByUrl('/logout');
     })
   }
 }

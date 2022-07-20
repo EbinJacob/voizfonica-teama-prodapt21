@@ -12,7 +12,7 @@ export class AdminAllIssuesComponent implements OnInit {
     this.service.getAllIssues().subscribe(res=>{
       this.issues=res;
     })
-    this.service.resolveIssue(5);
+    
   }
 
   ngOnInit(): void {
@@ -26,6 +26,11 @@ export class AdminAllIssuesComponent implements OnInit {
     }
   }
   markResolved(id:number){
-    this.service.resolveIssue(id);
+    this.service.resolveIssue(id).subscribe(res=>{
+      console.log(res);
+    });
+    this.service.getAllIssues().subscribe(res=>{
+      this.issues=res;
+    })
   }
 }

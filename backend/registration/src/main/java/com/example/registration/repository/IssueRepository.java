@@ -17,5 +17,5 @@ public interface IssueRepository  extends JpaRepository<Issue, Integer> {
 	
 	@Query("update Issue i set i.active=false where i.id=?1")
 	@Modifying
-	public void resolve(int id);
+	public void resolveIssue(int id);
 }

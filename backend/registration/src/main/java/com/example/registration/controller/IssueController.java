@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -36,7 +37,6 @@ public class IssueController {
 	
 	@GetMapping("/fetch_all_issues")	 
 	 public ResponseEntity<?> getAllIssues() {
-			 
 			 try {
 				 List<Issue> issues = service.getAllIssues();
 				 return new ResponseEntity<List<Issue>>(issues, HttpStatus.OK);
@@ -54,9 +54,8 @@ public class IssueController {
 		}
 		return userIssues;
 	}
-	@GetMapping("/resolve/{id}")
-	public int resolve(@PathVariable int id) {
-		service.resolve(id);
-		return 1;
+	@PutMapping("/resolve")
+	public void resolveIssue(@RequestBody int id) {
+		service.resolveIssue(id);
 	}
 }

@@ -4,11 +4,13 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.registration.model.RechargePlan;
@@ -21,6 +23,11 @@ public class RechargeController {
 	@Autowired
 	private RechargeService service;
 	
+	@PostMapping("/add_plan")
+	public RechargePlan addPlan(@RequestBody RechargePlan plan) {
+		System.out.println("Hello");
+		return service.savePlan(plan);
+	}
 	
 	@GetMapping("/get_plan_by_id/{planId}")
 	public RechargePlan getPlanById(@PathVariable int planId) throws Exception{
@@ -38,8 +45,5 @@ public class RechargeController {
 		}
 		return plans;
 	}
-	@PostMapping("/add_plan")
-	public void addPlan(@RequestBody RechargePlan plan) {
-		service.savePlan(plan);
-	}
+	
 }

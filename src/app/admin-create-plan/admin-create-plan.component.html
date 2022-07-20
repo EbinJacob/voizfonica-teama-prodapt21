@@ -5,8 +5,8 @@
                 <h1 style="font-size: xx-large;">Create new plans</h1>
             </div>
             <hr>
-            <form #offerform="ngForm" (submit)="inputOffer(offerform.value)">
-                <select aria-placeholder="select" class="form-control" name="serviceType" #select="ngModel" ngModel style="height: fit-content;">
+            <form [formGroup]="offerform"  (submit)="submit()">
+                <select aria-placeholder="select" class="form-control" name="serviceType" formControlName="serviceType" style="height: fit-content;">
                     <option value="">Select Service</option>
                     <option value="PREPAID">PREPAID</option>
                     <option value="POSTPAID">POSTPAID</option>
@@ -14,15 +14,15 @@
                 </select>
 
                 <input type="text" placeholder="Plan Name" required="" class="form-control" name="planName"
-                    #plan="ngModel" ngModel>
-                <span *ngIf="plan.invalid && plan.touched" class="errormessage alert-danger">Enter valid plan</span>
+                    formControlName="planName">
+                <span *ngIf="f['planName'].invalid && f['planName'].touched" class="errormessage alert-danger">Enter valid plan</span>
                 <input type="number" placeholder="Plan Cost" required="" class="form-control" name="planCost"
-                    #cost="ngModel" ngModel>
-                <span *ngIf="cost.invalid && cost.touched" class="errormessage alert-danger">Please enter plan
+                formControlName="planCost">
+                <span *ngIf="f['planCost'].invalid && f['planCost'].touched" class="errormessage alert-danger">Please enter plan
                     cost</span>
                 <input type="number" placeholder="Plan Validity" required="" class="form-control"
-                    name="planValidity" #validity="ngModel" ngModel>
-                <span *ngIf="validity.invalid && validity.touched" class="errormessage alert-danger">Please enter plan
+                    name="planValidity" formControlName="planValidity">
+                <span *ngIf="f['planValidity'].invalid && f['planValidity'].touched" class="errormessage alert-danger">Please enter plan
                     validity</span>
                 <div><button type="submit" id="submit">CREATE PLAN</button>
                     <button type="reset" id="reset">CLEAR</button>

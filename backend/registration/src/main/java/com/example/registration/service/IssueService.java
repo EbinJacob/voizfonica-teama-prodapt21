@@ -26,7 +26,7 @@ public class IssueService {
 	public List<Issue> fetchIssueByUserId(int userId){
 		return issueRepo.findByUserId(userId);
 	}
-	public void resolve(int id) {
-		issueRepo.resolve(id);
+	public void resolveIssue(int id) {
+		issueRepo.resolveIssue(id);
 	}
 }
